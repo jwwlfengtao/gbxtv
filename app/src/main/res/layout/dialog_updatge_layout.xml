@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_400"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg"
+        android:minHeight="@dimen/dp_254"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_describe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:text="在线升级"
+                    android:textSize="@dimen/sp_18" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_upDateInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_90"
+                android:layout_marginTop="@dimen/dp_34"
+                android:text="更新信息" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_marginTop="@dimen/dp_20"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_sure"
+                android:layout_width="@dimen/dp_136"
+                android:layout_height="@dimen/dp_58"
+                android:background="@drawable/bg_button_foucse"
+                android:focusable="true"
+                android:nextFocusDown="@null"
+                android:nextFocusLeft="@null"
+                android:nextFocusRight="@+id/btn_cancel"
+                android:nextFocusUp="@null"
+                android:text="@string/ensure"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="@dimen/dp_136"
+                android:layout_height="@dimen/dp_58"
+                android:background="@drawable/bg_button_foucse"
+                android:focusable="true"
+                android:nextFocusDown="@null"
+                android:nextFocusLeft="@+id/btn_sure"
+                android:nextFocusRight="@null"
+                android:nextFocusUp="@null"
+                android:text="@string/cancel"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
