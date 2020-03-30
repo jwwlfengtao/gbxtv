@@ -115,6 +115,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
             //设置默认图片
             viewHolder.image.setImageResource(R.mipmap.ic_launcher);
         }
+
+
         if (mainBeanList.get(i).isAdd()) {
             viewHolder.text_size.setVisibility(View.INVISIBLE);
             viewHolder.fram_added.setVisibility(View.VISIBLE);
