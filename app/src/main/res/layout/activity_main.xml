@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical"
+    android:weightSum="1080"
+    tools:context=".view.activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="60"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/text_codeName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dp_30"
+            android:gravity="right|center"
+            android:text="版本:1.1.2 2018-09-28"
+            android:textSize="@dimen/sp_15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="960"
+        android:orientation="horizontal"
+        android:weightSum="1920">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="60" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="480"
+            android:background="@drawable/area_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="480">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="365"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_24"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/usb_name"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/sp_19" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_weight="1" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_set"
+                                android:layout_width="@dimen/dp_80"
+                                android:layout_height="@dimen/dp_36"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:background="@drawable/bg_fouce_setting"
+                                android:nextFocusDown="@+id/button"
+                                android:nextFocusLeft="@null"
+                                android:nextFocusRight="@+id/tvRecyclerView"
+                                android:nextFocusUp="@null"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_10"
+                                    android:layout_height="@dimen/dp_10"
+                                    android:layout_marginRight="@dimen/dp_4"
+                                    android:src="@drawable/setting" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/setting"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="@dimen/sp_12" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_50"
+                                android:layout_marginRight="@dimen/dp_40"
+                                android:src="@drawable/santa" />
+
+
+                            <TextView
+                                android:id="@+id/text_netState"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/no_down_task"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/sp_12" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_24"
+                            android:layout_marginRight="@dimen/dp_24"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/text_useMemory"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已用2.5TB"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/sp_11" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:id="@+id/text_toatalMemory"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="共有2.7TB"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/sp_12" />
+                        </LinearLayout>
+
+                        <ProgressBar
+                            android:id="@+id/pb"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_10"
+                            android:layout_marginBottom="@dimen/dp_10"
+                            android:layout_marginLeft="@dimen/dp_24"
+                            android:layout_marginRight="@dimen/dp_24"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:max="100"
+                            android:progressDrawable="@drawable/progressbar"
+                            android:visibility="visible" />
+
+
+                        <Button
+                            android:id="@+id/button"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_56"
+                            android:layout_marginLeft="@dimen/dp_7"
+                            android:layout_marginRight="@dimen/dp_7"
+                            android:layout_marginTop="@dimen/dp_6"
+                            android:background="@drawable/bg_button_foucse"
+                            android:focusable="true"
+                            android:nextFocusDown="@+id/downing_recyclerView"
+                            android:nextFocusLeft="@null"
+                            android:nextFocusRight="@+id/tvRecyclerView"
+                            android:nextFocusUp="@+id/ll_set"
+                            android:text="暂停所有下载"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="410">
+
+                        <TextView
+                            android:id="@+id/text_load"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_24"
+                            android:layout_marginRight="@dimen/dp_24"
+                            android:text="@string/down_list"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/sp_19" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/downing_recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/text_load"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:focusable="true"
+                            android:nextFocusDown="@null"
+                            android:nextFocusLeft="@null"
+                            android:scrollbars="vertical"
+                            android:layout_marginRight="@dimen/dp_6"
+                            android:nextFocusRight="@+id/tvRecyclerView"
+                            android:nextFocusUp="@+id/button" />
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_empty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/no_downloading" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/sp_14"
+                                android:text="@string/no_down_task"
+                                android:textSize="@dimen/sp_12" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="185"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_loadCom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_24"
+                            android:layout_marginRight="@dimen/dp_24"
+                            android:text="@string/down_com"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/sp_19" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_down_com_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/text_loadCom"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:orientation="vertical"></LinearLayout>
+
+                        <TextView
+                            android:id="@+id/text_downCom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/no_down_com"
+                            android:textSize="@dimen/sp_12" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1300"
+            android:background="@drawable/area_bg"
+            android:orientation="horizontal"
+            android:weightSum="1300">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="40" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1220"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/resource_list"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/text_VIP_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2018-10-22 10:27:32 VIP到期"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/tvRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:focusable="true"
+                    android:nextFocusDown="@null"
+                    android:nextFocusLeft="@+id/button"
+                    android:nextFocusRight="@null"
+                    android:nextFocusUp="@null"
+                    android:scrollbars="vertical" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="40" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="60"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+</LinearLayout>

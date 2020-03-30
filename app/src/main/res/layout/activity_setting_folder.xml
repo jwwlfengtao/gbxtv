@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_72"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_0"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:focusable="false">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_23"
+                android:layout_marginRight="@dimen/dp_10"
+                android:src="@drawable/back" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/setting"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_23" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_143"
+        android:layout_marginTop="@dimen/dp_100"
+        android:text="@string/default_path" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_72"
+        android:layout_marginLeft="@dimen/dp_133"
+        android:layout_marginRight="@dimen/dp_133"
+
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/text_path"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_weight="1"
+            android:background="@drawable/bg_main_item"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_10"
+            android:text="home:download"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_20" />
+
+
+        <Button
+            android:id="@+id/choosePath"
+            android:layout_width="@dimen/dp_140"
+            android:layout_height="@dimen/dp_60"
+            android:background="@drawable/button_selected1"
+            android:focusable="false"
+            android:text="@string/browse"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_14" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_6"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/sure"
+            android:layout_width="@dimen/dp_140"
+            android:layout_height="@dimen/dp_60"
+            android:background="@drawable/button_unselected"
+            android:focusable="false"
+            android:text="@string/ensure"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_14" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="@dimen/dp_140"
+            android:layout_height="@dimen/dp_60"
+            android:background="@drawable/button_unselected"
+            android:focusable="false"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_14" />
+
+    </LinearLayout>
+</LinearLayout>
